@@ -45,6 +45,8 @@ dependencies {
     compile 'com.commonsware.cwac:sacklist:1.0.0'
     compile 'com.actionbarsherlock:viewpagerindicator:2.4.1'
     compile 'com.sothree:slidinguppanel:0.1-SNAPSHOT'
+    compile 'com.google.android.gms:play-services:4.3.23'
+    compile 'com.squareup.retrofit:retrofit:1.2.2'
 }
 
 android {

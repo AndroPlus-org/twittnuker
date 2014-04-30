@@ -169,6 +169,7 @@ import de.vanita5.twittnuker.provider.TweetStore.Mentions;
 import de.vanita5.twittnuker.provider.TweetStore.Notifications;
 import de.vanita5.twittnuker.provider.TweetStore.Permissions;
 import de.vanita5.twittnuker.provider.TweetStore.Preferences;
+import de.vanita5.twittnuker.provider.TweetStore.PushNotifications;
 import de.vanita5.twittnuker.provider.TweetStore.Statuses;
 import de.vanita5.twittnuker.provider.TweetStore.Tabs;
 import de.vanita5.twittnuker.provider.TweetStore.UnreadCounts;
@@ -263,6 +264,7 @@ public final class Utils implements Constants {
 		CONTENT_PROVIDER_URI_MATCHER.addURI(TweetStore.AUTHORITY, CachedTrends.Local.CONTENT_PATH,
 				TABLE_ID_TRENDS_LOCAL);
 		CONTENT_PROVIDER_URI_MATCHER.addURI(TweetStore.AUTHORITY, Tabs.CONTENT_PATH, TABLE_ID_TABS);
+		CONTENT_PROVIDER_URI_MATCHER.addURI(TweetStore.AUTHORITY, PushNotifications.CONTENT_PATH, TABLE_ID_PUSH_NOTIFICATIONS);
 		CONTENT_PROVIDER_URI_MATCHER
 				.addURI(TweetStore.AUTHORITY, CachedStatuses.CONTENT_PATH, TABLE_ID_CACHED_STATUSES);
 		CONTENT_PROVIDER_URI_MATCHER
@@ -2109,6 +2111,8 @@ public final class Utils implements Constants {
 				return CachedTrends.Local.TABLE_NAME;
 			case TABLE_ID_TABS:
 				return Tabs.TABLE_NAME;
+			case TABLE_ID_PUSH_NOTIFICATIONS:
+				return PushNotifications.TABLE_NAME;
 			case TABLE_ID_CACHED_STATUSES:
 				return CachedStatuses.TABLE_NAME;
 			case TABLE_ID_CACHED_USERS:
